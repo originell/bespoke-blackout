@@ -14,13 +14,26 @@ Download the [production version][min] or the [development version][max].
 
 ## Basic Usage
 
-First, include both `bespoke.js` and `bespoke-blackout.js` in your page.
+This plugin is shipped in a [UMD format](https://github.com/umdjs/umd), meaning that it is available as a CommonJS/AMD module or browser global.
 
-Then, simply include the plugin when initing bespoke
+For example, when using CommonJS modules:
 
-    bespoke.horizontal.from('article', {
-        blackout: true
-    });
+```js
+var bespoke = require('bespoke'),
+  blackout = require('bespoke-blackout');
+
+bespoke.from('article', [
+  blackout()
+]);
+```
+
+When using browser globals:
+
+```js
+bespoke.from('article', [
+  bespoke.plugins.blackout()
+]);
+```
 
 Press `b` to blackout the screen, or `w` to whiteout.
 

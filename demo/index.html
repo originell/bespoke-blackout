@@ -55,12 +55,18 @@
             </section>
         </article>
 
-        <script src="../libs/bespoke/bespoke.js"></script>
-        <script src="../dist/bespoke-blackout.min.js"></script>
+        <script src="../node_modules/bespoke/dist/bespoke.js"></script>
+        <script src="../node_modules/bespoke-classes/dist/bespoke-classes.js"></script>
+        <script src="../node_modules/bespoke-keys/dist/bespoke-keys.js"></script>
+        <script src="../node_modules/bespoke-touch/dist/bespoke-touch.js"></script>
+        <script src="../dist/bespoke-blackout.js"></script>
         <script>
-            bespoke.horizontal.from('article', {
-                blackout: true
-            });
+            bespoke.from('article', [
+                bespoke.plugins.classes(),
+                bespoke.plugins.keys(),
+                bespoke.plugins.touch(),
+                bespoke.plugins.blackout()
+            ]);
         </script>
     </body>
 </html>
