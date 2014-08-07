@@ -7,20 +7,35 @@
     "name": "Luis Nell",
     "url": "http://www.twitter.com/originell"
   },
+  "main": "./lib/bespoke-blackout.js",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 0.10.0"
   },
   "scripts": {
-    "test": "grunt jasmine"
+    "test": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/originell/bespoke-blackout.git"
   },
+  "peerDependencies": {
+    "bespoke": "^1.0.0"
+  },
   "devDependencies": {
-    "grunt": "~0.3.17",
-    "grunt-jasmine-runner": "~0.6.0",
-    "temporary": "0.0.5"
+    "bespoke": "^1.0.0",
+    "bespoke-classes": "^1.0.0",
+    "bespoke-keys": "^1.0.0",
+    "bespoke-touch": "^1.0.0",
+    "browserify": "^4.1.5",
+    "gulp": "^3.5.1",
+    "gulp-clean": "^0.2.4",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-header": "^1.0.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^0.3.0",
+    "lodash": "^2.4.1",
+    "vinyl-buffer": "0.0.0",
+    "vinyl-source-stream": "^0.1.1"
   },
   "licenses": [
     {
